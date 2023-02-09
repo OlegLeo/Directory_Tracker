@@ -27,6 +27,7 @@ Now, for this project to work, you must:
                 - sudo apt-get mpack
                 
 5. Configure SMTP:
+
                 - sudo nano /etc/ssmtp/ssmtp.conf 
                 - Add add these lines:
 
