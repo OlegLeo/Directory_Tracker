@@ -43,7 +43,7 @@ log_file="$main_folder_path/monitor_log_$today"
 
 # Define the cron command - to change the time, (MINUTES HOURS * * * ...)
 
-cron_command="59 23 * * * if [ -f $log_file ]; then mpack -s 'Monitor Log for $today' $log_file mrpentesterqwerty@gmail.com; else echo 'No changes were detected in the monitor log for $today.' | mailx -s 'No Changes for Today' mrpentesterqwerty@gmail.com; fi"
+cron_command="59 23 * * * if [ -f $log_file ]; then mpack -s 'Monitor Log for $today' $log_file YOUREMAILHERE@gmail.com; else echo 'No changes were detected in the monitor log for $today.' | mailx -s 'No Changes for Today' YOUREMAILHERE@gmail.com; fi"
 
 # Deletes the 1st line from the crontab 
 crontab -l | sed '1d' | crontab -
