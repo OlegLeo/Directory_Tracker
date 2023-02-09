@@ -20,11 +20,25 @@ Now, for this project to work, you must:
         or manually:
                 - sudo apt-get install -y xdotool"
                 - sudo apt-get install -y inotify-tools"
+                - sudo apt-get install ssmtp
+                - sudo apt-get mpack
+                
+5. Configure SMTP:
+                - sudo nano /etc/ssmtp/ssmtp.conf 
+                - Add add these lines:
 
-5. Start the maintrigger.sh with this command:
+                                root=username@gmail.com
+                                mailhub=smtp.gmail.com:465
+                                rewriteDomain=gmail.com
+                                AuthUser=username
+                                AuthPass=password
+                                FromLineOverride=YES
+                                UseTLS=YES                
+
+6. Start the maintrigger.sh with this command:
 
         - ./maintrigger.sh /path/to/directory/to/be/monitored/
 
-6. Run this for help:
+7. Run this for help:
 
         -h, --help                      ---(" ./maintrigger.sh -h ")---
