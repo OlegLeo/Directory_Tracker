@@ -1,4 +1,0 @@
-xdotool
-inotify-tools
-ssmtp
-mpack
